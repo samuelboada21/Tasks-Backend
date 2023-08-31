@@ -15,7 +15,7 @@ app.use(express.json());
 app.use(cookieParser());
 app.use('/api',authRoutes);
 app.use('/api',taskRoutes);
-app.use('/api', (req, res) => {
+app.use('/', (req, res) => {
     res.status(200).json({ message: '¡Bienvenido a la API!' });
 });
 
